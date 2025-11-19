@@ -27,20 +27,60 @@ The next flip-flop need only “recognize” that the first flip-flop’s Q outp
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
 **Procedure**
+1.Declare clock, reset, and counter output (e.g., 4-bit Q).
 
-/* write all the steps invloved */
+2.Use an always block triggered on the positive edge of the clock.
+
+3.Inside the always block:
+
+If reset = 1 → Set counter to 0000.
+
+Else → Increment counter by 1 (Q = Q + 1).
+
+4.End the always block.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+module Co_ud (
+    input  wire clk,       // clock input
+    input  wire rst,       // synchronous reset
+	 input  wire d,
+    output reg  [2:0] q   // 3-bit counter output
+);
 
-Developed by: RegisterNumber:
-*/
+initial begin
+     q <= 3'b0000;
+	 end
+
+always @(posedge clk) 
+begin
+q <= 3'b000;
+    if (rst) 
+        q <= 3'b000;       // reset counter to 0
+    else if(d)
+        q <= q + 1;        // increment counter
+		  else
+		  q <= q - 1;
+end
+
+endmodule
+
+
+Developed by:MUGILARASI E
+
+
+RegisterNumber:25017644
+
 
 **RTL LOGIC UP COUNTER**
+<img width="1920" height="1080" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/42ee5a05-c7f5-4bb5-9bd3-157636058daf" />
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
+<img width="1920" height="1080" alt="Screenshot (52)" src="https://github.com/user-attachments/assets/49de97fd-0a1b-42e8-8c51-4426816b0835" />
 
 **TRUTH TABLE**
 
+
 **RESULTS**
+Thus the synchronous-up-counter using verilog and validating their functionality using their functional tables is verified.
