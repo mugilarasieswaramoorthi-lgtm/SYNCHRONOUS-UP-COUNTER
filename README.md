@@ -73,11 +73,14 @@ RegisterNumber:25017644
 
 
 **RTL LOGIC UP COUNTER**
+<img width="1920" height="1080" alt="Screenshot (52)" src="https://github.com/user-attachments/assets/d6dae1ae-469d-4ca5-8efe-418facbb56a2" />
 
 
 
 
 **TIMING DIAGRAM FOR IP COUNTER**
+<img width="1920" height="1080" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/4cbaa50b-6c59-4be7-a93d-8b125d7ab887" />
+
 
 **TRUTH TABLE**
 
